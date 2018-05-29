@@ -1,0 +1,6 @@
+[user]
+	name = 123vivekr
+	email = 123vivekr@gmail.com
+[alias]
+	s = status
+	l = log --oneline --graph --decorate
