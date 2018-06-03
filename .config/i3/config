@@ -148,10 +148,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-bindsym $mod+x exec --no-startup-id "i3lock -c 000000 && xset dpms force off"
-bindsym $mod+F3 exec --no-startup-id nautilus -w &
-bindsym $mod+F2 exec --no-startup-id chromium &
-bindsym $mod+F4 exec --no-startup-id code &
 
 # colors
 
@@ -187,18 +183,32 @@ bar {
 
 }
 
-exec --no-startup-id nm-applet
+# Hiding borders adjacent to the screen edges
 hide_edge_borders smart
+
+# Some tools to run during startup
+exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id compton &
 exec --no-startup-id redshift -t 6500:4000
 
+# Custom keybindings
+bindsym $mod+x exec --no-startup-id "i3lock -c 000000 && xset dpms force off"
+bindsym $mod+F3 exec --no-startup-id nautilus -w &
+bindsym $mod+F2 exec --no-startup-id chromium &
+bindsym $mod+F4 exec --no-startup-id code &
+bindsym $mod+End exec --no-startup-id "i3lock -c 000000 && systemctl suspend"
+
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
-bindsym $mod+End exec --no-startup-id "i3lock -c 000000 && systemctl suspend"
+# enable floating mode for all VLC windows
+for_window [class="vlc"] floating enable
+
+
 

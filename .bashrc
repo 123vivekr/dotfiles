@@ -136,3 +136,6 @@ alias t='sensors'
 
 #htop alias
 alias h='htop'
+
+#shutdown now alias
+alias off='shutdown now'
