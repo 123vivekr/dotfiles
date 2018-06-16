@@ -116,14 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# added by Anaconda3 installer
-export PATH="/home/vivek/anaconda3/bin:$PATH"
-
-# for django
-export PYTHONPATH="/usr/local/lib/python3.6/dist-packages:$PYTHONPATH"
-
 # for python 3 default
-alias python=python3
+# alias python=python3
 
 # to prevent accidental overwriting
 set -o noclobber
