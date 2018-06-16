@@ -1,0 +1,5 @@
+# synclient settings (/etc/X11/Xsession.d)
+
+synclient ClickFinger3=2
+synclient TapButton3=2
+
