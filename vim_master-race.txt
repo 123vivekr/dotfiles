@@ -1,0 +1,99 @@
+--------------------------------------------
+Vim Cheatsheet by 
+123vivekr@gmail.com
+github.com/123vivekr
+--------------------------------------------
+--Basics--
+i = insert text just before the cursor
+I = insert text at start of the line
+a = append text just after the cursor
+A = append text at the end of the line
+o = open a new line below
+O = open a new line above
+s = substitute the current character
+S = substitute the current line
+r = replace the current character
+R = replace continuous characters
+
+--Visual Mode V,v
+c = change
+e = end of word
+
+--Moving Around--
+ctrl-b = move one screen backward
+ctrl-f = move one screen forward
+G = go to line / last line
+^ = move to the first character in the line
+| = move to the first character in the line
+$ = jump to the last character in the line
+H = jump to first line of the window
+M = jump to middle of the window
+L = jump to last line being displayed
+w = move to the next word
+e = move to end of the next word
+b = move one word backward
+) = move to next sentence
+( = move to the previous sentence
+} = move to the next paragraph
+{ = move to the previous paragraph
+
+--Mark & Jump--
+m<name_of_mark> = mark a point
+'<name_of_mark> = jump to that point
+`<name_of_word> = jump to that exact row & column
+ctrl-o = jump to previous location
+ctrl-i = jump forward to next location
+ctrl-] = follow help link
+
+--Selecting in visual mode--
+ap = paragraph
+aw = word
+ab = block
+a" = quoted string
+
+--Basic Editing--
+dl = delete one character at the current position
+dw = delete one word at current postion
+dd = delete the current line
+ya<selection> = yank selection
+p = paste after current cursor position
+P = paster before current position
+x = delete one character at the cursor positon
+
+--Undo & Redo--
+:u = undo
+:r = redo
+:earlier <relative_time> = go back to time
+:later <relative_time> = go future in time
+:undolist = view the undo tree
+
+--Search--
+/<search> = search in file
+n = next occurence
+N = previous occurence
+\<word\> = match exact word
+/\d = search for a digit
+/\d\+ = search for a group of digits, ie, number (one or more digits)
+/\d\* = " (zero or more digits)
+
+--Multiplicity--
+:set foldmethod=indent
+zc, zo, za = close fold, open fold, alternate open/close fold
+:buffers OR ls = to show buffers
+:e <file_name> = open file
+:b <buffer_number> = switch to buffer
+:new <file_name> = open new window/view
+ctrl-w <motion_key> = to switch windows/views
+:sp OR ctrl-w + s = split current view
+:vsp OR ctrl-w v = vertical split
+ctrl-w r = rotate windows
+ctrl-w K = move window to topmost position
+:resize <number_of_lines> = resize window
+ctrl-w _ = make current window as big as possible
+ctrl-w = = make windows equal in height
+:tabnew = open a new tab
+gt = next tab
+gT = previous tab
+:tabc OR :q = close tab
+:tabmove <position> = move tab positions
+
