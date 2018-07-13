@@ -133,3 +133,10 @@ alias h='htop'
 
 #shutdown now alias
 alias off='shutdown now'
+
+#for flutter
+export PATH=/home/vivek/git_projects/FaceTag/flutter/bin:$PATH
+
+#for android studio
+export PATH=/usr/bin/android-studio/bin:$PATH
+alias studio='studio.sh'
