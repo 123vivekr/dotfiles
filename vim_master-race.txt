@@ -22,6 +22,7 @@ e = end of word
 --Moving Around--
 ctrl-b = move one screen backward
 ctrl-f = move one screen forward
+g = go to starting of first line
 G = go to line / last line
 ^ = move to the first character in the line
 | = move to the first character in the line
@@ -97,3 +98,7 @@ gT = previous tab
 :tabc OR :q = close tab
 :tabmove <position> = move tab positions
 
+--Scripting--
+q<macro_letter> = start recording macro command
+u OR U = lowercase/uppercase
+@<macro_letter> = replay macro
