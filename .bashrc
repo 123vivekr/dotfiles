@@ -140,3 +140,5 @@ export PATH=/home/vivek/git_projects/FaceTag/flutter/bin:$PATH
 #for android studio
 export PATH=/usr/bin/android-studio/bin:$PATH
 alias studio='studio.sh'
+alias nv='nvim'
+alias gt.='gnome-terminal .'
