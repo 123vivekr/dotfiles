@@ -84,6 +84,7 @@ zc, zo, za = close fold, open fold, alternate open/close fold
 :e <file_name> = open file
 :b <buffer_number> = switch to buffer
 :new <file_name> = open new window/view
+ctrl-w + c = close window
 ctrl-w <motion_key> = to switch windows/views
 :sp OR ctrl-w + s = split current view
 :vsp OR ctrl-w v = vertical split
@@ -102,3 +103,11 @@ gT = previous tab
 q<macro_letter> = start recording macro command
 u OR U = lowercase/uppercase
 @<macro_letter> = replay macro
+
+--Using vim for programming--
+% = jump to corresponding curly bracket
+:!<command> = run shell command from within vim
+gf = go to file pointed by cursor position
+:Vex OR :Sex = browse file system within vim
+ctrl-x ctrl-o = for code completion (ctrl-n and ctrl-p for next and previous suggestions)
+
