@@ -37,6 +37,7 @@ b = move one word backward
 ( = move to the previous sentence
 } = move to the next paragraph
 { = move to the previous paragraph
+:only OR :on OR ctrl-w + ctrl-o = only current window
 
 --Mark & Jump--
 m<name_of_mark> = mark a point

@@ -106,7 +106,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
@@ -122,23 +122,21 @@ fi
 # to prevent accidental overwriting
 set -o noclobber
 
-#speedo profile
+# speedo profile
 alias s='speedometer -r wlp2s0'
 
-#hardware temperature
+# hardware temperature
 alias t='sensors'
 
-#htop alias
+# htop alias
 alias h='htop'
 
-#shutdown now alias
+# shutdown now alias
 alias off='shutdown now'
 
-#for flutter
-export PATH=/home/vivek/git_projects/FaceTag/flutter/bin:$PATH
-
-#for android studio
-export PATH=/usr/bin/android-studio/bin:$PATH
-alias studio='studio.sh'
 alias nv='nvim'
 alias gt.='gnome-terminal .'
+
+# set default text editor
+export EDITOR='nvim'
+export VISUAL='nvim'

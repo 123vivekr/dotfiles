@@ -43,7 +43,7 @@ Plug 'vim-scripts/CSApprox'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
-Plug 'scrooloose/syntastic'
+"" Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
@@ -307,7 +307,6 @@ if !exists('*s:setupWrapping')
     set textwidth=79
   endfunction
 endif
-
 "*****************************************************************************
 "" Autocmd Rules
 "*****************************************************************************
@@ -581,3 +580,4 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
+

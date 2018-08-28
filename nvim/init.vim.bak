@@ -1,0 +1,13 @@
+et number
+set relativenumber
+" set spell
+set hlsearch
+set smartcase
+set incsearch
+set autoindent
+set mouse=a
+set smartindent
+set smarttab
+set clipboard=unnamed
+set softtabstop=2
+set syntax
