@@ -4,3 +4,5 @@ synclient ClickFinger3=2
 synclient TapButton3=2
 synclient MaxSpeed=2
 synclient AccelFactor=0.09
+synclient TapButton2=3
+synclient TapButton1=1
