@@ -172,7 +172,6 @@ bar {
         mode dock
         hidden_state show
         modifier Mod1
-        status_command SCRIPT_DIR=/home/vivek/.i3blocks/i3blocks.conf i3blocks
         colors {
             background $bg-color
                 separator #757575
@@ -198,9 +197,9 @@ exec --no-startup-id xbindkeys &
 
 # Custom keybindings
 bindsym $mod+x exec --no-startup-id "i3lock -c 000000 && xset dpms force off"
-bindsym $mod+F3 exec --no-startup-id nautilus -w &
+bindsym $mod+F3 exec --no-startup-id "termite -e ranger &"
 bindsym $mod+F2 exec --no-startup-id google-chrome-stable &
-bindsym $mod+F4 exec --no-startup-id "gnome-terminal --command=nvim"
+bindsym $mod+F4 exec --no-startup-id "termite -e nvim"
 bindsym $mod+End exec --no-startup-id "i3lock -c 000000 && systemctl suspend"
 
 # enable floating mode for all VLC windows
