@@ -1,3 +1,4 @@
+# UBUNTU .bashrc file
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -135,7 +136,7 @@ alias h='htop'
 alias off='shutdown now'
 
 alias nv='nvim'
-alias gt.='gnome-terminal .'
+alias t='termite'
 
 # set default text editor
 export EDITOR='nvim'
