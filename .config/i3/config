@@ -169,9 +169,11 @@ client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color     
 # finds out, if available)
 bar {
         status_command i3status
+        # font pango:Hack, FontAwesome 10
         mode dock
         hidden_state show
         modifier Mod1
+        status_command i3blocks -c ~/.i3blocks/i3blocks.conf
         colors {
             background $bg-color
                 separator #757575
@@ -204,3 +206,9 @@ bindsym $mod+End exec --no-startup-id "i3lock -c 000000 && systemctl suspend"
 
 # enable floating mode for all VLC windows
 for_window [class="vlc"] floating enable
+
+# ScreenShot
+# Print screen focused window
+bindsym Print exec scrot -u '%Y%m%d_%H%M%S.png' -e 'mv $f ~/Pictures/scrots/'
+# Print screen entire view
+bindsym $mod+Print exec scrot '%Y%m%d_%H%M%S.png' -e 'mv $f ~/Pictures/scrots/'
