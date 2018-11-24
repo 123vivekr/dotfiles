@@ -1,8 +1,47 @@
-# file location = /etc/X11/Xsession.d/80synaptics
+# location: /etc/X11/Xsession.d/80synaptics
+#lm dimension
+synclient PalmDetect=1
+synclient PalmMinWidth=4
+synclient PalmMinZ=100 file location = /etc/X11/Xsession.d/80synaptics
+#
+#Touchpad sensibility (move)
+synclient FingerLow=10
+synclient FingerHigh=20
 
-synclient ClickFinger3=2
+#Click detection
+#synclient MaxTapTime=180
+#synclient MaxTapMove = 242
+#synclient MaxDoubleTapTime = 180
+
+#2 finger = right click
+synclient TapButton2=3
+##3 finger = middle click
 synclient TapButton3=2
+## tap to click
+synclient TapButton1=1
+##click corners
+##synclient RBCornerButton=0 MaxTapTime
+##synclient RTCornerButton=0
+##synclient LTCornerButton=0
+##synclient LBCornerButton=0
+
+# Oval instead of rectangular
+synclient CircularPad=1
+#
+# TapAndDragGesture
+synclient TapAndDragGesture=1
+
+# scroll in sides
+synclient VertEdgeScroll=1
+# synclient HorizEdgeScroll=0
+# synclient CornerCoasting=0
+#
+##2 finger scroll
+synclient VertTwoFingerScroll=1
+synclient HorizTwoFingerScroll=0
+#
+##Disable Touchpad on start
+##synclient TouchpadOff=1
+
 synclient MaxSpeed=2
 synclient AccelFactor=0.09
-synclient TapButton2=3
-synclient TapButton1=1
