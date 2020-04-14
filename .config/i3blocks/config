@@ -24,7 +24,8 @@
 #
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
-command=/usr/lib/i3blocks/$BLOCK_NAME
+# Change $SCRIPT_DIR to the location of your scripts!
+command=/home/vivek/.config/i3blocks/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
@@ -33,27 +34,13 @@ markup=none
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
-#[volume]
-#label=VOL
-#label=♪
-#instance=Master
-#instance=PCM
-#interval=1
-#signal=10
 
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=MEM
-separator=false
-interval=1
-
-#[memory]
-#label=SWAP
-#instance=swap
-#separator=false
-#interval=30
+label=MEM 
+interval=30
 
 # Disk usage
 #
@@ -61,58 +48,65 @@ interval=1
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
-#label=HOME
-# label=
-label=/
-#instance=/mnt/data
-interval=10
+label=/ 
+#DIR=/mnt/data
+interval=30
 
 # Network interface monitoring
 #
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
-#instance=wlan0
+#IFACE=wlan0
 color=#00FF00
 interval=10
 separator=false
 
+[bandwidth]
+interval=1
+#INTERFACE=eth0
+#INLABEL=IN 
+#OUTLABEL=OUT 
+#TREAT_UNKNOWN_AS_UP=0
+
 [wifi]
-#instance=wlp3s0
+#INTERFACE=wlp3s0
+label=wifi:
 interval=10
 separator=false
 
-[bandwidth]
-#instance=eth0
-interval=1
 
 # CPU usage
 #
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
-label=
+label=CPU 
 interval=10
-min_width= 100.00%
-#separator=false
+min_width=CPU 100.00%
 
 [load_average]
+label=LOAD 
 interval=10
 
 # Battery indicator
 #
 # The battery instance defaults to 0.
 [battery]
-command=/home/vivek/.i3blocks/battery
-label=BAT
+label=BAT 
 #label=⚡
-#instance=1
 interval=30
+
+[temperature]
+label=TEMP 
+interval=10
+#T_WARN=70
+#T_CRIT=90
+#SENSOR_CHIP=""
 
 # Date Time
 #
 [time]
-#command=date '+%Y-%m-%d %H:%M:%S'
 command=date '+(%d-%m-%y) %l:%M:%S %p'
 interval=1
 
@@ -129,17 +123,16 @@ interval=1
 #
 # Support multiple VPN, with colors.
 #[openvpn]
-#interval=1
+#interval=20
 
 # Temperature
 #
 # Support multiple chips, though lm-sensors.
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-[temperature]
-label=TEMP
-interval=10
-
+#[temperature]
+#label=TEMP
+#interval=10
 
 # Key indicators
 #
@@ -148,11 +141,13 @@ interval=10
 # bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 # bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 #[keyindicator]
-#instance=CAPS
+#KEY=CAPS
+#markup=pango
 #interval=once
 #signal=11
 
 #[keyindicator]
-#instance=NUM
+#KEY=NUM
+#markup=pango
 #interval=once
 #signal=11

@@ -31,13 +31,14 @@ font pango:DejaVu Sans Mono 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Ubuntu Mono:bold:pixelsize=15'
+bindsym $mod+Shift+d exec --no-startup-id rofi -show
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -56,16 +57,16 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h move left 100
+bindsym $mod+Shift+j move down 100
+bindsym $mod+Shift+k move up 100
+bindsym $mod+Shift+l move right 100
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Left move left 10
+bindsym $mod+Shift+Down move down 10
+bindsym $mod+Shift+Up move up 10
+bindsym $mod+Shift+Right move right 10
 
 # split in horizontal orientation
 bindsym $mod+$alt+h split h
@@ -132,10 +133,10 @@ mode "resize" {
 # Pressing right will grow the window’s width.
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
-    bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize grow height 100 px or 100 ppt
+        bindsym k resize shrink height 100 px or 100 ppt
+        bindsym l resize grow width 100 px or 100 ppt
+        bindsym h resize shrink width 100 px or 100 ppt
 
 # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -162,25 +163,26 @@ set $inactive-text-color    #676E7D
 #                       border              background          text                    indicator
 client.focused          $bg-color           $bg-color           $text-color             #4c7899
 client.unfocused        $inactive-bg-color  $inactive-bg-color  $inactive-text-color    #333333
-client.focused_inactive $inactive-bg-color  $inactive-bg-color  $inactive-text-color    #333333
-client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color             #2f343a
+client.focused_inactive $inactive-bg-color  $inactive-bg-color  $inactive-text-color    #333333 client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color             #2f343a
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        i3bar_command i3bar -t
         # font pango:Hack, FontAwesome 10
         mode dock
         hidden_state show
         modifier Mod1
-        status_command i3blocks -c ~/.i3blocks/i3blocks.conf
-        colors {
-            background $bg-color
-                separator #757575
-#                   border              background          text
-                focused_workspace   $bg-color           $bg-color           $text-color
-                inactive_workspace  $inactive-bg-color  $inactive-bg-color  $inactive-text-color
-                urgent_workspace    $urgent-bg-color    $urgent-bg-color    $text-color
+        status_command i3blocks -c ~/.config/i3blocks/config
+		colors {
+           background #1c1c1c
+           statusline #eeeeee
+           separator #666666
+           #                  border  backgr. text
+           focused_workspace  #4c7899 #D3D3D3 #ffffff
+           focused_workspace  #4c7899 #636262 #ffffff
+           inactive_workspace #333333 #222222 #888888
+           urgent_workspace   #2f343a #900000 #ffffff
         }
 
 }
@@ -194,18 +196,31 @@ exec --no-startup-id volumeicon
 exec --no-startup-id compton &
 exec --no-startup-id redshift -t 6500:4000
 exec --no-startup-id "pulseaudio --start"
-exec --no-startup-id "feh --randomize --bg-fill ~/Pictures/"
+exec --no-startup-id "feh --bg-fill ~/Pictures/stunted_pine.jpg"
 exec --no-startup-id xbindkeys &
 
 # Custom keybindings
-bindsym $mod+x exec --no-startup-id "i3lock -c 000000 && xset dpms force off"
-bindsym $mod+F3 exec --no-startup-id "termite -e ranger &"
-bindsym $mod+F2 exec --no-startup-id google-chrome-stable &
-bindsym $mod+F4 exec --no-startup-id "termite -e nvim"
-bindsym $mod+End exec --no-startup-id "i3lock -c 000000 && systemctl suspend"
+bindsym $mod+x exec --no-startup-id "betterlockscreen --off 5 -l dimblur"
+bindsym $mod+F2 exec --no-startup-id chromium &
+bindsym $mod+F3 exec --no-startup-id "kitty -e ranger &"
+bindsym $mod+F4 exec --no-startup-id "kitty -e nvim"
+bindsym $mod+F5 exec --no-startup-id "thunar &"
+bindsym $mod+End exec --no-startup-id "betterlockscreen -s dimblur"
+bindsym $mod+F9 exec --no-startup-id "/opt/enpass/Enpass showassistant &"
 
 # enable floating mode for all VLC windows
 for_window [class="vlc"] floating enable
+
+#Inorder to use gaps, you need to disable window titlebars
+# You can also use any non-zero value if you'd like to have a border
+for_window [class=".*"] border pixel 1
+gaps inner 8
+gaps outer 5
+
+# Only enable gaps on a workspace when there is at least one container
+smart_gaps on
+
+smart_borders on
 
 # ScreenShot
 # Print screen focused window
