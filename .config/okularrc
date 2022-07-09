@@ -1,0 +1,27 @@
+[Desktop Entry]
+FullScreen=false
+
+[MainWindow]
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAAAAA7IAAAP4AAAABAAAAAQAAAAIAAAACPwAAAADAAAAAQAAAAEAAAAsAHEAdQBpAGMAawBBAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHICAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAA==
+ToolBarsMovable=Disabled
+eDP-1 Height 1920x1080=1038
+eDP-1 Width 1920x1080=946
+eDP-1 XPosition 1920x1080=964
+eDP-1 YPosition 1920x1080=32
+
+[Recent Files]
+File1[$e]=$HOME/Documents/Learning/Blockchain/Ethereum_Whitepaper_-_Buterin_2014.pdf
+File2[$e]=$HOME/Documents/Learning/gfs-sosp2003.pdf
+File3[$e]=$HOME/Documents/Learning/Jon Erickson - Hacking_ the art of exploitation-No Starch Press (2008).pdf
+File4[$e]=$HOME/Downloads/document.pdf
+Name1[$e]=Ethereum_Whitepaper_-_Buterin_2014.pdf
+Name2[$e]=gfs-sosp2003.pdf
+Name3[$e]=Jon Erickson - Hacking_ the art of exploitation-No Starch Press (2008).pdf
+Name4[$e]=document.pdf
+
+[Shortcut Schemes]
+Current Scheme=Default
+
+[Shortcuts]
+annotationToolBar=Alt+A
