@@ -58,8 +58,11 @@ call plug#begin()
     Plug 'airblade/vim-gitgutter'
 call plug#end()
 
-let NERDTreeShowHidden=1
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fc <cmd>Telescope commands<cr>
+nnoremap <leader>fk <cmd>Telescope keymaps<cr>
 
 " Disable math tex conceal feature
 let g:tex_conceal = ''
@@ -71,6 +74,7 @@ let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_fenced_languages = ['tsx=typescriptreact']
 
+" Moonfly theem
 colorscheme moonfly
 let g:moonflyCursorColor = v:true
 let g:moonflyNormalFloat = v:true
