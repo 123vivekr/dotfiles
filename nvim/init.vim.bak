@@ -54,14 +54,12 @@ call plug#begin()
 
     " Completion / linters / formatters
     Plug 'plasticboy/vim-markdown'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     " Git
     Plug 'airblade/vim-gitgutter'
 
     " Language plugins
     Plug 'ray-x/go.nvim'
-    Plug 'ray-x/guihua.lua'
 call plug#end()
 
 " Telescope
@@ -89,9 +87,6 @@ let g:moonflyUnderlineMatchParen = v:true
 " Shortcuts
 nnoremap <F5> :NERDTreeToggle<CR>
 " Tabs
-	nnoremap <S-Tab> gT
-	nnoremap <Tab> gt
-	nnoremap <silent> <S-t> :tabnew<CR>
-
-autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()
-lua require('go').setup()
+nnoremap <S-Tab> gT
+nnoremap <Tab> gt
+nnoremap <silent> <S-t> :tabnew<CR>
