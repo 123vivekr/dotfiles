@@ -1,6 +1,7 @@
 [user]
 	name = 123vivekr
 	email = 123vivekr@gmail.com
+	editor = vim
 [alias]
 	s = status
 	l = log --oneline --graph --decorate
