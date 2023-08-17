@@ -20,6 +20,14 @@ config.keys = {
 	{ mods = "CMD", key = "Backspace", action = action.SendKey({ mods = "CTRL", key = "u" }) },
 }
 
+config.font_size = 15.0
+config.window_padding = {
+  left = 1,
+  right = 1,
+  top = 1,
+  bottom = 0,
+}
+
 -- and finally, return the configuration to wezterm
 return config
 
