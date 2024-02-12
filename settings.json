@@ -1,0 +1,30 @@
+{
+    "workbench.sideBar.location": "right",
+    "editor.lineNumbers": "relative",
+    "vim.useSystemClipboard": true,
+    "editor.minimap.enabled": false,
+    "redhat.telemetry.enabled": false,
+    "svelte.enable-ts-plugin": true,
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "settingsSync.ignoredExtensions": [],
+    "workbench.colorTheme": "Black",
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "gitlens.codeLens.symbolScopes": [
+            "!Module"
+        ]
+    },
+    "editor.guides.bracketPairs": "active",
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    "editor.accessibilitySupport": "off",
+    "workbench.startupEditor": "none",
+    "codeQL.telemetry.enableTelemetry": false,
+}
